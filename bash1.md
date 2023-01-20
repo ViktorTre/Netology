@@ -43,7 +43,7 @@ echo "THE END"
  else\
  echo "Your result: " $((b-a))\
  fi;\
- echo "THE END"\
+ echo "THE END"  
  
 ![](/images/bash1/bash2_1.png "1 скрин 2 задания")\
 ![](/images/bash1/bash2_2.png "2 скрин 2 задания")\
@@ -59,6 +59,22 @@ echo "THE END"
 - Если txt или doc – вывести слово «text»
 - Если формат не подходит под заданные выше – написать «unknown»
 
+#!/bin/bash\
+echo "Privet, vvedite name file and file extension"\
+read a\
+case "$a" in\
+    (*.jpg|*.gif|*.png)\
+        echo "image"\
+    ;;\
+    *.mp3|*.wav)\
+        echo "audio"\
+    ;;\
+    *.txt|*.doc)\
+        echo "text"\
+    ;;\
+    *)\
+        echo "unknown"\
+esac\
 
 ![](/images/bash1/bash3_1.png "1 скрин 3 задания")
 
