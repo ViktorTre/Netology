@@ -10,18 +10,17 @@
 
 Скрипт должен принимать абсолютный путь до директории, например `/tmp/testdir` или `/home/user/testdir`
 
-#!/bin/bash
-echo "Please, enter your pat to directory"
-read p
-if [[ -d $p ]]; then
-echo "takaya directory suschestvuet!"
-else mkdir $p && echo "sozdali directory $p"
-fi;
-echo "THE END"
+#!/bin/bash  
+echo "Please, enter your pat to directory"  
+read p  
+if [[ -d $p ]]; then  
+echo "takaya directory suschestvuet!"  
+else mkdir $p && echo "sozdali directory $p"  
+fi;  
+echo "THE END"  
 
-![](/images/bash1/bash1_1.png "1 скрин 1 задания")
-
-![](/images/bash1/bash1_2.png "2 скрин 1 задания")
+![](/images/bash1/bash1_1.png "1 скрин 1 задания")\
+![](/images/bash1/bash1_2.png "2 скрин 1 задания")\
 
 
 ------
@@ -33,22 +32,21 @@ echo "THE END"
 3. Если числа равны – умножить их друг на друга (или возвести в квадрат одно из чисел) и вывести результат в консоль.
 
 #!/bin/bash
- echo "Please, enter znachenie peremennoi"
- read a
- echo "Please, enter nachente peremennoi"
- read b
- if [[ $a -gt $b ]]; then
- echo "Your result" $((a-b))
- elif [[ $a -eq $b ]]; then
- "Your result: " $((a*b))
- else
- echo "Your result: " $((b-a))
- fi;
- echo "THE END"
+ echo "Please, enter znachenie peremennoi"\
+ read a\
+ echo "Please, enter nachente peremennoi"\
+ read b\
+ if [[ $a -gt $b ]]; then\
+ echo "Your result" $((a-b))\
+ elif [[ $a -eq $b ]]; then\
+ "Your result: " $((a*b))\
+ else\
+ echo "Your result: " $((b-a))\
+ fi;\
+ echo "THE END"\
  
-![](/images/bash1/bash2_1.png "1 скрин 2 задания")
-
-![](/images/bash1/bash2_2.png "2 скрин 2 задания")
+![](/images/bash1/bash2_1.png "1 скрин 2 задания")\
+![](/images/bash1/bash2_2.png "2 скрин 2 задания")\
  
 ------
 ### Задание 3.
