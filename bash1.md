@@ -1,20 +1,5 @@
 # Домашнее задание к занятию "Переменные и условные операторы" 
-#!/bin/bash
-echo "Privet, vvedite name file and file extension"
-read a
-case "$a" in
-    (*.jpg|*.gif|*.png)
-        echo "image"
-    ;;
-    *.mp3|*.wav)
-        echo "audio"
-    ;;
-    *.txt|*.doc)
-        echo "text"
-    ;;
-    *)
-        echo "unknown"
-esac
+
 Третьяков Виктор
 ------
 ### Задание 1.
@@ -78,13 +63,13 @@ echo "THE END"
 echo "Privet, vvedite name file and file extension"\
 read a\
 case "$a" in\
-    (*.jpg|*.gif|*.png)\
+    ( *.jpg| *.gif| *.png)\
         echo "image"\
     ;;\
-    *.mp3|*.wav)\
+     *.mp3| *.wav)\
         echo "audio"\
     ;;\
-    *.txt|*.doc)\
+     *.txt| *.doc)\
         echo "text"\
     ;;\
     *)\
