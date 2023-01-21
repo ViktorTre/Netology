@@ -46,21 +46,21 @@ done
  - при подсчете не нужно учитывать поддиректории и символьные ссылки, считать только средний размер файлов в заданной директории.
  - для вывода среднего достаточно использовать целочисленное значение (стандартное деление в bash)
 
-#!/bin/bash\
-myFunc () {\  
-if [[ -d $1 ]]; then\  
-echo "takaya directory suschestvuet!"\
-else echo "takoi dirictory ne suschestvuet!" && exit 11\  
-fi\
-}\ 
-myFunc $1\  
-for file in $1/*; do\  
-if [[ -f $file ]]; then\   
-v=$(stat -c "%s" $file)\
-o=$((o+v))\   
-k=$((k+1))\  
-fi\  
-done\ 
+#!/bin/bash  
+myFunc () {  
+if [[ -d $1 ]]; then  
+echo "takaya directory suschestvuet!"  
+else echo "takoi dirictory ne suschestvuet!" && exit 11   
+fi  
+}  
+myFunc $1  
+for file in $1/*; do  
+if [[ -f $file ]]; then   
+v=$(stat -c "%s" $file)  
+o=$((o+v))   
+k=$((k+1))  
+fi  
+done  
 echo "srednii razmer file"=$((o/k)) bytes    
 
 ![](/images/bash2/bash6_1.png "1 скрин 3 задания")\
