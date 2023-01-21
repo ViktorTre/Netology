@@ -8,15 +8,15 @@
 
 Скрипт должен выводить на экран все числа от 1 до 100, которые делятся на 3.
 
-Для выполнения задания используйте цикл.
-#!/bin/bash
-i=0
-while [[ $i -le 100 ]]; do
-   ((i++))
-   if [[ $((i%3)) -eq 0 ]]; then
-   echo $i
-fi;
-done
+Для выполнения задания используйте цикл.\
+#!/bin/bash  
+i=0  
+while [[ $i -le 100 ]]; do  
+   ((i++))  
+   if [[ $((i%3)) -eq 0 ]]; then  
+   echo $i  
+fi;  
+done  
 ![](/images/bash2/bash4_1.png "1 скрин 1 задания")\
 ![](/images/bash2/bash4_2.png "2 скрин 1 задания")\
 ![](/images/bash2/bash4_3.png "3 скрин 1 задания")
@@ -25,13 +25,13 @@ done
 
 Напишите скрипт, который каждые 5 секунд будет выводить на экран текущее время и содержимое файла `/proc/loadavg`.
 
-Для выполнения задания используйте цикл.
-#!/bin/bash
-while true 
-do
-echo $(date +'%X'); cat /proc/loadavg
-sleep 5
-done
+Для выполнения задания используйте цикл.\
+#!/bin/bash  
+while true   
+do  
+echo $(date +'%X'); cat /proc/loadavg  
+sleep 5  
+done  
 ![](/images/bash2/bash5_1.png "1 скрин 2 задания")\
 ![](/images/bash2/bash5_2.png "2 скрин 2 задания")
 ------
@@ -67,22 +67,22 @@ done
   9. (необязательно) Если все работает, данную функцию можно добавить к себе в `.bash_profile` и использовать для работы.
 
 </details>
-#!/bin/bash
-myFunc () {
-if [[ -d $1 ]]; then
-echo "takaya directory suschestvuet!"
-else echo "takoi dirictory ne suschestvuet!" && exit 11
-fi
-}
-myFunc $1
-for file in $1/*; do
-if [[ -f $file ]]; then
-v=$(stat -c "%s" $file)
-o=$((o+v))
-k=$((k+1))
-fi
-done
-echo "srednii razmer file"=$((o/k)) bytes
+#!/bin/bash  
+myFunc () {  
+if [[ -d $1 ]]; then  
+echo "takaya directory suschestvuet!"  
+else echo "takoi dirictory ne suschestvuet!" && exit 11  
+fi  
+}  
+myFunc $1  
+for file in $1/*; do  
+if [[ -f $file ]]; then  
+v=$(stat -c "%s" $file)  
+o=$((o+v))  
+k=$((k+1))  
+fi  
+done  
+echo "srednii razmer file"=$((o/k)) bytes  
 
 ![](/images/bash2/bash6_1.png "1 скрин 3 задания")\
 ![](/images/bash2/bash6_2.png "2 скрин 3 задания")
