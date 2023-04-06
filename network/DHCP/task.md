@@ -5,152 +5,140 @@
 Задание 1.
 Для чего служит протокол DHCP?
 
-Для того чтобы иметь возможность автоматизировать выдачу IP адресов и других параметров, по определенным правилам, без участия администратора. Это бывает удобно для больших сетей, где вручную очень трудозатратно прописывать статическую маршрутизацию, или в сетях где постоянно меняются клиенты (например в кафе/коворкингах) или в домашних сетях где домохозяйки хотят Plug'n'Play(в плане получения адреса без этих ваших сложностей)
+# Для того чтобы иметь возможность автоматизировать выдачу IP адресов и других параметров, по определенным правилам, без участия администратора. Это бывает удобно для больших сетей, где вручную очень трудозатратно прописывать статическую маршрутизацию, или в сетях где постоянно меняются клиенты (например в кафе/коворкингах) или в домашних сетях где домохозяйки хотят Plug'n'Play(в плане получения адреса без этих ваших сложностей)
 
 Может ли работать сеть без DHCP-сервера?
 
-да, вполне, но тогда адреса и настройки прописываются вручную
+# да, вполне, но тогда адреса и настройки прописываются вручную
 
 Задание 2.
 На каком порту/портах работает DHCP?
 
-67/68 UDP
-546/547 UDP, если DHCPv6
+# 67/68 UDP
+# 546/547 UDP, если DHCPv6
 
 Задание 3.
 Какие настройки можно произвести используя опции?
-1 - Маска подсети, из которой получен адрес.
-4 -	Список IP-адресов серверов времени.
-6 - Cписок IP-адресов серверов DNS.
-69 - Серверы SMTP по умолчанию.
-94 - Идентификатор сетевого интерфейса клиента DHCP.
+# 1 - Маска подсети, из которой получен адрес.
+# 4 -	Список IP-адресов серверов времени.
+# 6 - Cписок IP-адресов серверов DNS.
+# 69 - Серверы SMTP по умолчанию.
+# 94 - Идентификатор сетевого интерфейса клиента DHCP.
 Приведите ответ в свободной форме.
 
 Задание 4.
 Сконфигурируйте сервер DHCP.
 
 Пришлите получившийся конфигурационный файл.
-# dhcpd.conf
+#dhcpd.conf
 #
-# Sample configuration file for ISC dhcpd
+#Sample configuration file for ISC dhcpd
 #
-# Attention: If /etc/ltsp/dhcpd.conf exists, that will be used as
-# configuration file instead of this file.
+#Attention: If /etc/ltsp/dhcpd.conf exists, that will be used as
+#configuration file instead of this file.
 #
 
-# option definitions common to all supported networks...
+#option definitions common to all supported networks...
 option domain-name "netology.ru";
 option domain-name-servers ns1.netology.ru, ns2.netology.ru;
 
 default-lease-time 600;
 max-lease-time 7200;
 
-# The ddns-updates-style parameter controls whether or not the server will
-# attempt to do a DNS update when a lease is confirmed. We default to the
-# behavior of the version 2 packages ('none', since DHCP v2 didn't
-# have support for DDNS.)
+#The ddns-updates-style parameter controls whether or not the server will
+#attempt to do a DNS update when a lease is confirmed. We default to the
+#behavior of the version 2 packages ('none', since DHCP v2 didn't
+#have support for DDNS.)
 #ddns-update-style none;
 
-# If this DHCP server is the official DHCP server for the local
-# network, the authoritative directive should be uncommented.
+#If this DHCP server is the official DHCP server for the local
+#network, the authoritative directive should be uncommented.
 authoritative;
 
-# Use this to send dhcp log messages to a different log file (you also
-# have to hack syslog.conf to complete the redirection).
+#Use this to send dhcp log messages to a different log file (you also
+#have to hack syslog.conf to complete the redirection).
 #log-facility local7;
 
-# No service will be given on this subnet, but declaring it helps the
-# DHCP server to understand the network topology.
+#No service will be given on this subnet, but declaring it helps the
+#DHCP server to understand the network topology.
 
 #subnet 10.152.187.0 netmask 255.255.255.0 {
 #}
 
-# This is a very basic subnet declaration.
+#This is a very basic subnet declaration.
 
 #subnet 10.254.239.0 netmask 255.255.255.224 {
-#  range 10.254.239.10 10.254.239.20;
-#  option routers rtr-239-0-1.example.org, rtr-239-0-2.example.org;
+#range 10.254.239.10 10.254.239.20;
+#option routers rtr-239-0-1.example.org, rtr-239-0-2.example.org;
 #}
 
-# This declaration allows BOOTP clients to get dynamic addresses,
-# which we don't really recommend.
+#This declaration allows BOOTP clients to get dynamic addresses,
+#which we don't really recommend.
 
 #subnet 10.254.239.32 netmask 255.255.255.224 {
-#  range dynamic-bootp 10.254.239.40 10.254.239.60;
-#  option broadcast-address 10.254.239.31;
-#  option routers rtr-239-32-1.example.org;
+#range dynamic-bootp 10.254.239.40 10.254.239.60;
+#option broadcast-address 10.254.239.31;
+#option routers rtr-239-32-1.example.org;
 #}
 
-# A slightly different configuration for an internal subnet.
+#A slightly different configuration for an internal subnet.
 subnet 10.0.2.0 netmask 255.255.255.0 {
 range 10.0.2.26 10.0.2.50;
 option domain-name-servers ns1.netology.ru;
-#  option domain-name "internal.example.org";
-#  option subnet-mask 255.255.255.224;
+#option domain-name "internal.example.org";
+#option subnet-mask 255.255.255.224;
 option routers 10.0.2.15;
-#  option broadcast-address 10.5.5.31;
-#  default-lease-time 600;
-#  max-lease-time 7200;
+#option broadcast-address 10.5.5.31;
+#default-lease-time 600;
+#max-lease-time 7200;
 }
 
-# Hosts which require special configuration options can be listed in
-# host statements.   If no address is specified, the address will be
-# allocated dynamically (if possible), but the host-specific information
-# will still come from the host declaration.
+#Hosts which require special configuration options can be listed in
+#host statements.   If no address is specified, the address will be
+#allocated dynamically (if possible), but the host-specific information
+#will still come from the host declaration.
 
 #host passacaglia {
-#  hardware ethernet 0:0:c0:5d:bd:95;
-#  filename "vmunix.passacaglia";
-#  server-name "toccata.example.com";
+#hardware ethernet 0:0:c0:5d:bd:95;
+#filename "vmunix.passacaglia";
+#server-name "toccata.example.com";
 #}
 
-# Fixed IP addresses can also be specified for hosts.   These addresses
-# should not also be listed as being available for dynamic assignment.
-# Hosts for which fixed IP addresses have been specified can boot using
-# BOOTP or DHCP.   Hosts for which no fixed address is specified can only
-# be booted with DHCP, unless there is an address range on the subnet
-# to which a BOOTP client is connected which has the dynamic-bootp flag
-# set.
+#Fixed IP addresses can also be specified for hosts.   These addresses
+#should not also be listed as being available for dynamic assignment.
+#Hosts for which fixed IP addresses have been specified can boot using
+#BOOTP or DHCP.   Hosts for which no fixed address is specified can only
+#be booted with DHCP, unless there is an address range on the subnet
+#to which a BOOTP client is connected which has the dynamic-bootp flag
+#set.
 #host fantasia {
-#  hardware ethernet 08:00:07:26:c0:a5;
-#  fixed-address fantasia.example.com;
+#hardware ethernet 08:00:07:26:c0:a5;
+#fixed-address fantasia.example.com;
 #}
 
-# You can declare a class of clients and then do address allocation
-# based on that.   The example below shows a case where all clients
-# in a certain class get addresses on the 10.17.224/24 subnet, and all
-# other clients get addresses on the 10.0.29/24 subnet.
+#You can declare a class of clients and then do address allocation
+#based on that.   The example below shows a case where all clients
+#in a certain class get addresses on the 10.17.224/24 subnet, and all
+#other clients get addresses on the 10.0.29/24 subnet.
 
 #class "foo" {
-#  match if substring (option vendor-class-identifier, 0, 4) = "SUNW";
+#match if substring (option vendor-class-identifier, 0, 4) = "SUNW";
 #}
 
 #shared-network 224-29 {
-#  subnet 10.17.224.0 netmask 255.255.255.0 {
-#	option routers rtr-224.example.org;
-#  }
-#  subnet 10.0.29.0 netmask 255.255.255.0 {
-#	option routers rtr-29.example.org;
-#  }
-#  pool {
-#	allow members of "foo";
-#	range 10.17.224.10 10.17.224.250;
-#  }
-#  pool {
-#	deny members of "foo";
-#	range 10.0.29.10 10.0.29.230;
-#  }
+#subnet 10.17.224.0 netmask 255.255.255.0 {
+#option routers rtr-224.example.org;
+#}
+#subnet 10.0.29.0 netmask 255.255.255.0 {
+#option routers rtr-29.example.org;
+#}
+#pool {
+#allow members of "foo";
+#range 10.17.224.10 10.17.224.250;
+#}
+#pool {
+#deny members of "foo";
+#range 10.0.29.10 10.0.29.230;
+#}
 #}
 
-Дополнительные задания (со звездочкой*)
-Эти задания дополнительные (не обязательные к выполнению) и никак не повлияют на получение вами зачета по этому домашнему заданию. Вы можете их выполнить, если хотите глубже и/или шире разобраться в материале.
-
-Задание 5.
-Поймайте в сети пакеты DHCP любым сниффером.
-
-Пришлите скриншот пойманого одного пакета с объяснением что это за пакет, какой шаг получения сетевых настроек.
-
-Задание 6.
-Сконфигурируйте сервер PXE, выложите любой образ.
-
-Пришлите скриншот клиента, который получил настройки и подключился к PXE-серверу.
