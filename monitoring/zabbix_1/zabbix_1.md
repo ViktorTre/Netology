@@ -15,7 +15,7 @@
 #### Требования к результаты 
 1. Прикрепите в файл README.md скриншот авторизации в админке
 
-![task1](/zabbix_1/task_1.png)
+![task1](/monitoring/zabbix_1/task_1.png)
 
 2. Приложите в файл README.md текст использованных команд в GitHub
 
@@ -40,15 +40,15 @@ systemctl enable zabbix-server apache2
 #### Требования к результаты 
 1. Приложите в файл README.md скриншот раздела Configuration > Hosts, где видно, что агенты подключены к серверу  
 
-![task2_1](/zabbix_1/task_2.png)
+![task2_1](/monitoring/zabbix_1/task_2.png)
 
 2. Приложите в файл README.md скриншот лога zabbix agent, где видно, что он работает с сервером  
 
-![task2_2](/zabbix_1/task3.png)
+![task2_2](/monitoring/zabbix_1/task3.png)
 
 3. Приложите в файл README.md скриншот раздела Monitoring > Latest data для обоих хостов, где видны поступающие от агентов данные.  
 
-![task2_3](/zabbix_1/task_4.png)
+![task2_3](/monitoring/zabbix_1/task_4.png)
 
 4. Приложите в файл README.md текст использованных команд в GitHub  
 tail -f /var/log/zabbix/zabbix_agentd.log  
