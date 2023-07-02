@@ -14,19 +14,20 @@
 
 #### Требования к результаты 
 1. Прикрепите в файл README.md скриншот авторизации в админке
-![задание1](/zabbix_1/task_1.png)
+![](/zabbix_1/task_1.png)
 2. Приложите в файл README.md текст использованных команд в GitHub
-apt install postgresql
-wget https://repo.zabbix.com/zabbix/6.0/debian/pool/main/z/zabbix-release/zabbix-release_6.0-4+debian11_all.deb
-sudo dpkg -i zabbix-release_6.0-4+debian11_all.deb
-apt update
-apt install zabbix-server-pgsql zabbix-frontend-php php7.4-pgsql zabbix-apache-conf zabbix-sql-scripts zabbix-agent
-sudo -u postgres createuser --pwprompt zabbix
-sudo -u postgres createdb -O zabbix zabbix
-zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix
-nano /etc/zabbix/zabbix_server.conf
-systemctl restart zabbix-server apache2
-systemctl enable zabbix-server apache2
+
+apt install postgresql  
+wget https://repo.zabbix.com/zabbix/6.0/debian/pool/main/z/zabbix-release/zabbix-release_6.0-4+debian11_all.deb  
+sudo dpkg -i zabbix-release_6.0-4+debian11_all.deb  
+apt update  
+apt install zabbix-server-pgsql zabbix-frontend-php php7.4-pgsql    zabbix-apache-conf zabbix-sql-scripts zabbix-agent  
+sudo -u postgres createuser --pwprompt zabbix  
+sudo -u postgres createdb -O zabbix zabbix  
+zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix  
+nano /etc/zabbix/zabbix_server.conf  
+systemctl restart zabbix-server apache2  
+systemctl enable zabbix-server apache2  
 
 ---
 
@@ -35,14 +36,14 @@ systemctl enable zabbix-server apache2
 Установите Zabbix Agent на два хоста.
 
 #### Требования к результаты 
-1. Приложите в файл README.md скриншот раздела Configuration > Hosts, где видно, что агенты подключены к серверу
-![задание2_1](/zabbix_1/task_2.png)
-2. Приложите в файл README.md скриншот лога zabbix agent, где видно, что он работает с сервером
-![задание2_2](/zabbix_1/task3.png)
-3. Приложите в файл README.md скриншот раздела Monitoring > Latest data для обоих хостов, где видны поступающие от агентов данные.
-![задание2_3](/zabbix_1/task_4.png)
-4. Приложите в файл README.md текст использованных команд в GitHub
-tail -f /var/log/zabbix/zabbix_agentd.log
+1. Приложите в файл README.md скриншот раздела Configuration > Hosts, где видно, что агенты подключены к серверу  
+![](/zabbix_1/task_2.png)
+2. Приложите в файл README.md скриншот лога zabbix agent, где видно, что он работает с сервером  
+![](/zabbix_1/task3.png)
+3. Приложите в файл README.md скриншот раздела Monitoring > Latest data для обоих хостов, где видны поступающие от агентов данные.  
+![](/zabbix_1/task_4.png)
+4. Приложите в файл README.md текст использованных команд в GitHub  
+tail -f /var/log/zabbix/zabbix_agentd.log  
 ---
 ## Задание 3 со звёздочкой*
 Установите Zabbix Agent на Windows (компьютер) и подключите его к серверу Zabbix.
