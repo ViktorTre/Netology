@@ -15,7 +15,7 @@
 #### Требования к результату
 - [ ] Прикрепите к файлу README.md скриншот systemctl status prometheus, где будет написано: prometheus.service — Prometheus Service Netology Lesson 9.4 — [Ваши ФИО]
 
-[task1](/monitoring/prometheus_1/task_1.png)
+![task1](/monitoring/prometheus_1/task_1.png)
 
 ---
 
@@ -25,7 +25,7 @@
 #### Требования к результату
 - [ ] Прикрепите к файлу README.md скриншот systemctl status node-exporter, где будет написано: node-exporter.service — Node Exporter Netology Lesson 9.4 — [Ваши ФИО]
 
-[task2](/monitoring/prometheus_1/task_2.png)
+![task2](/monitoring/prometheus_1/task_2.png)
 
 ---
 
@@ -35,11 +35,11 @@
 #### Требования к результату
 - [ ] Прикрепите к файлу README.md скриншот конфигурации из интерфейса Prometheus вкладки Status > Configuration
 
-[task3_1](/monitoring/prometheus_1/task3_1.png)
+![task3_1](/monitoring/prometheus_1/task3_1.png)
 
 - [ ] Прикрепите к файлу README.md скриншот из интерфейса Prometheus вкладки Status > Targets, чтобы было видно минимум два эндпоинта
 
-[task3_2](/monitoring/monitoring/prometheus_1/task3_2.png)
+![task3_2](/monitoring/monitoring/prometheus_1/task3_2.png)
 
 ---
 ## Дополнительные задания со звёздочкой*
@@ -53,7 +53,7 @@
 #### Требования к результату
 - [ ] Прикрепите к файлу README.md скриншот левого нижнего угла интерфейса, чтобы при наведении на иконку пользователя были видны ваши ФИО
 
-[task4](/monitoring/prometheus_1/task_4.png)
+![task4](/monitoring/prometheus_1/task_4.png)
 
 ---
 
@@ -63,7 +63,7 @@
 #### Требования к результату
 - [ ] Прикрепите к файлу README.md скриншот дашборда (ID:11074) с поступающими туда данными из Node Exporter
 
-[task5](/monitoring/prometheus_1/task_5.png)
+![task5](/monitoring/prometheus_1/task_5.png)
 
 ## Критерии оценки
 1. Выполнено минимум 3 обязательных задания
