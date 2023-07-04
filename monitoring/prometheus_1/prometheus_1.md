@@ -39,7 +39,7 @@
 
 - [ ] Прикрепите к файлу README.md скриншот из интерфейса Prometheus вкладки Status > Targets, чтобы было видно минимум два эндпоинта
 
-![task3_2](/monitoring/monitoring/prometheus_1/task3_2.png)
+![task3_2](/monitoring/prometheus_1/task3_2.png)
 
 ---
 ## Дополнительные задания со звёздочкой*
