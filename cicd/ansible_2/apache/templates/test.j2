@@ -1,0 +1,29 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<title>Serving index.html with Apache</title>
+
+</head>
+
+<body>
+
+<h1>How do {{ user }} serve index.html with Apache</h1>
+
+<p>Hello dear {{ user }}! </p>
+
+<p> your processors: {{ ansible_processor }},</p> 
+
+<p> COREs = {{ ansible_processor_cores }}, </p>
+
+<p>totalRAM = {{ ansible_memtotal_mb}} MB, </p>
+
+<p>IPv4 = {{ ansible_eth0.ipv4.address }}, </p>
+
+<p>HDD size = {{ ansible_devices.vda.size }} "</p>
+
+</body>
+
+</html>

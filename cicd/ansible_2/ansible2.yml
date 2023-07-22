@@ -1,0 +1,51 @@
+---
+- hosts: testservers
+  remote_user: user
+  gather_facts: true
+  become: yes
+  tasks:
+  
+  - name: download Apache Kafka
+    uri:
+      url: https://downloads.apache.org/kafka/3.5.0/kafka-3.5.0-src.tgz
+      dest: /tmp
+    tags: kafka
+
+  - name: make directory
+    file:
+      path: /home/user/kafka
+      state: directory
+      owner: user
+      group: user
+      mode: 0777
+    tags: kafka
+
+  - name: extracting Apache Kafka
+    ansible.builtin.unarchive:
+      src: /tmp/kafka-3.5.0-src.tgz
+      dest: /home/user/kafka
+      remote_src: yes
+    tags: kafka
+
+  - name: install tuned
+    apt:
+      name: tuned
+      state: present
+    tags: tuned
+
+  - name: reload 
+    systemd:
+      daemon_reload: yes
+    tags: tuned
+
+  - name: enable tuned
+    systemd:
+      name: tuned
+      enabled: yes
+    tags: tuned
+
+  roles: 
+  - motd  
+  - apache
+
+...

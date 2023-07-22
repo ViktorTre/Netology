@@ -1,0 +1,35 @@
+---
+# tasks file for apache
+
+- name: update system and install apache 
+  apt:
+    name: apache2
+    state: present
+    update_cache: yes
+  tags: apache
+
+- name: print ansible facts
+  debug:
+    msg: "{{ ansible_processor }}, COREs = {{ ansible_processor_cores }}, totalRAM = {{ ansible_memtotal_mb}} MB, IPv4 = {{ ansible_eth0.ipv4.address }}, HDD size = {{ ansible_devices.vda.size }} "
+  tags: apache
+
+- name: creating index.html for apache
+  template: 
+    src: "test.j2"
+    dest: "/var/www/html/index.html"
+    owner: root
+    group: root
+    mode: 0755
+  tags: apache
+
+- name: restart and enable apache
+  service: 
+    name: apache2
+    state: restarted
+    enabled: yes
+  tags: apache
+
+- name: testing availability 
+  ansible.builtin.uri:
+    url: "http://{{ ansible_facts.all_ipv4_addresses[0] }}:{{ port }}"
+  tags: apache

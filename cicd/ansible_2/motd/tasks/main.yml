@@ -1,0 +1,34 @@
+---
+# tasks file for motd
+
+- name: hostname
+  shell:
+    hostname 
+  register: hostnameinfo
+  tags: motd
+
+- name: ipv4
+  shell:
+    ip a | grep eth0 | grep inet | cut -d ' ' -f6 
+  register: ipinfo
+  tags: motd
+
+- name: changing motd
+  template: 
+    src: "test.j2"
+    dest: "/etc/update-motd.d/99-test"
+    owner: root
+    group: root
+    mode: 0755
+  tags: motd
+  
+- name: starting motd
+  shell:
+    run-parts /etc/update-motd.d 
+  register: motdinfo
+  tags: motd
+
+- debug:
+      msg: 
+      - "{{motdinfo.stdout_lines}}"
+  tags: motd
