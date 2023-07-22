@@ -14,7 +14,8 @@
 
 ![вывод терраформ](/cicd/yandexcloud/terraform.png)
 
-![ycnginx.yml]https://github.com/ViktorTre/Netology/tree/main/cicd/yandexcloud/ycnginx.yml)
+![ycnginx]https://github.com/ViktorTre/Netology/tree/main/cicd/yandexcloud/ycnginx.yml)
+
 ![role nginx](https://github.com/ViktorTre/Netology/tree/main/cicd/yandexcloud/nginx)
 
 ![вывод ansible](/cicd/yandexcloud/ansible.png)
