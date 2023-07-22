@@ -70,3 +70,12 @@
 ![external apache](/cicd/ansible_2/apache2.png)
 
 ![internal apache](/cicd/ansible_2/apache3.png)
+
+---
+добавил в роль apache handlers, теперь если конфигурация апач не изменилась - не проиходит перезагрузка веб-сервера
+![role apache](https://github.com/ViktorTre/Netology/tree/main/cicd/ansible_2/apache/handlers)
+
+
+![extra1](/cicd/ansible_2/extratask2.png)
+
+![extra2](/cicd/ansible_2/extratask2.png)

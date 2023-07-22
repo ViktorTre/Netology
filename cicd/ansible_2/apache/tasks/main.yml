@@ -21,13 +21,8 @@
     group: root
     mode: 0755
   tags: apache
+  notify: restart apache
 
-- name: restart and enable apache
-  service: 
-    name: apache2
-    state: restarted
-    enabled: yes
-  tags: apache
 
 - name: testing availability 
   ansible.builtin.uri:
