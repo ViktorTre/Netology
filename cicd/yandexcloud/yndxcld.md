@@ -10,11 +10,11 @@
 
 Требуется установить nginx, залить при помощи Ansible конфигурационные файлы nginx и веб-ресурса. 
 
-terraform ![](/cicd/yandexcloud/terraform/)
+terraform ![](https://github.com/ViktorTre/Netology/tree/main/cicd/yandexcloud/terraform)
 
 ![вывод терраформ](/cicd/yandexcloud/terraform.png)
 
-role nginx ![](/cicd/yandexcloud/nginx/)
+role nginx ![](https://github.com/ViktorTre/Netology/tree/main/cicd/yandexcloud/nginx)
 
 ![вывод ansible](/cicd/yandexcloud/ansible.png)
 
