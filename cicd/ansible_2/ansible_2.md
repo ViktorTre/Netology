@@ -8,13 +8,15 @@
 
 1. Скачать какой-либо архив, создать папку для распаковки и распаковать скаченный архив. Например, можете использовать [официальный сайт](https://kafka.apache.org/downloads) и зеркало Apache Kafka. При этом можно скачать как исходный код, так и бинарные файлы, запакованные в архив — в нашем задании не принципиально.
 
-![ansible2.yml](https://github.com/ViktorTre/Netology/tree/main/cicd/ansible_2/ansible.yml)
+![ansible2.yml](https://github.com/ViktorTre/Netology/tree/main/cicd/ansible_2/ansible2.yml)
 
 ![playbook kafka](/cicd/ansible_2/kafka.png)
 
 ![kafka](/cicd/ansible_2/kafka2.png)
 
 2. Установить пакет tuned из стандартного репозитория вашей ОС. Запустить его, как демон — конфигурационный файл systemd появится автоматически при установке. Добавить tuned в автозагрузку.
+
+![ansible2.yml](https://github.com/ViktorTre/Netology/tree/main/cicd/ansible_2/ansible2.yml)
 
 ![playbook tuned](/cicd/ansible_2/tuned.png)
 
