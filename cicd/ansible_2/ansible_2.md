@@ -76,6 +76,6 @@
 ![role apache](https://github.com/ViktorTre/Netology/tree/main/cicd/ansible_2/apache/handlers)
 
 
-![extra1](/cicd/ansible_2/extratask2.png)
+![extra1](/cicd/ansible_2/extratask1.png)
 
 ![extra2](/cicd/ansible_2/extratask2.png)
