@@ -1,0 +1,10 @@
+#cloud-config
+ssh_pwauth: no
+users:
+  - name: user
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh-authorized-keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILYTzaK/7s+WX0IalwuSE9Z9MntyNDrWU398Jjkl4Ngk root@Ubuntu64
+

@@ -1,0 +1,21 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<title>Serving index.html with Nginx</title>
+
+</head>
+
+<body>
+
+<h1>How do {{ user }} serve index.html with Nginx</h1>
+
+<p>Nginx is a freely avaliable open-source web-server. It can be reverse proxy, load balancing</p>
+
+<p>IP: http://{{ ansible_facts.all_ipv4_addresses[0] }}:{{ port }}</p>
+
+</body>
+
+</html>

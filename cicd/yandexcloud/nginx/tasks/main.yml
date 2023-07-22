@@ -1,0 +1,30 @@
+---
+# tasks file for nginx
+- name: install nginx
+  apt:
+    name:
+      - nginx
+    state: present
+
+- name: avialability port "{{ port }}"
+  wait_for:
+    port: "{{ port }}"
+    delay: 10
+
+- name: "add index.html page"
+  template: 
+    src: "index.html.j2"
+    dest: "/usr/share/nginx/html/index.html"
+    owner: root
+    group: root
+    mode: 0755
+
+- name: restart nginx
+  service: 
+    name: nginx
+    state: restarted
+    enabled: yes
+       
+- name: show ip
+  debug:
+    msg: "http://{{ ansible_facts.all_ipv4_addresses[0] }}:{{ port }}"
