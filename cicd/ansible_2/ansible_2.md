@@ -14,6 +14,8 @@
 
 ![kafka](/cicd/ansible_2/kafka2.png)
 
+---
+
 2. Установить пакет tuned из стандартного репозитория вашей ОС. Запустить его, как демон — конфигурационный файл systemd появится автоматически при установке. Добавить tuned в автозагрузку.
 
 ![ansible2.yml](https://github.com/ViktorTre/Netology/tree/main/cicd/ansible_2/ansible2.yml)
@@ -22,6 +24,8 @@
 
 ![tuned](/cicd/ansible_2/tuned2.png)
 
+---
+
 3. Изменить приветствие системы (motd) при входе на любое другое. Пожалуйста, в этом задании используйте переменную для задания приветствия. Переменную можно задавать любым удобным способом.
 
 ![role motd](https://github.com/ViktorTre/Netology/tree/main/cicd/ansible_2/motd)
@@ -29,6 +33,8 @@
 ![playbook motd](/cicd/ansible_2/motd1.png)
 
 ![motd](/cicd/ansible_2/motd2.png)
+
+---
 
 ### Задание 2
 
@@ -42,6 +48,7 @@
 
 ![motd](/cicd/ansible_2/motd2.png)
 
+---
 
 ### Задание 3
 
