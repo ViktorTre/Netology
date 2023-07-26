@@ -22,7 +22,7 @@
 
 В качестве ответа добавьте ссылку на этот коммит в ваш md-файл с решением.
 
-![ссылка на 1 коммит](https://github.com/ViktorTre/git_homework/commit/a21cc02b52fd85d4dca943d7b9456c39f85af048)
+![ссылка на 1 коммит](https://github.com/ViktorTre/git_homework/commit/ed21cc52aa727d0089d3891b1f5883a4a87caa18)
 ---
 
 ### Задание 2
@@ -36,7 +36,7 @@
 
 В качестве ответа добавьте ссылку на этот коммит в ваш md-файл с решением.
 
-![ссылка на коммит](https://github.com/ViktorTre/git_homework/commit/1935ab0b14cafff3778abae11ef45ec6bc34f7e5)
+![ссылка на коммит](https://github.com/ViktorTre/git_homework/commit/2f9e11f27186dcdbc8ce2c0f48090853840f8877)
 
 ---
 
@@ -52,7 +52,7 @@
 
 В качестве ответа прикрепите ссылку на граф коммитов https://github.com/ваш-логин/ваш-репозиторий/network в ваш md-файл с решением.
 
-![ссылка на граф коммитов](https://github.com/ViktorTre/git_homework/network)
+![ссылка на граф коммитов](https://github.com/ViktorTre/git_homework1/network)
 ---
 ## Дополнительные задания* (со звёздочкой)
 
