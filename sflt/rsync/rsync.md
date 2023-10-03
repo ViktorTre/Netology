@@ -9,13 +9,13 @@
 
 rsync -azvh --delete /home/tretyakov/ /tmp/backup/
 
-[задание_1](/sflt/rsync/task1_1.png)
+![задание_1](/sflt/rsync/task1_1.png)
 
 - Необходимо исключить из синхронизации все директории, начинающиеся с точки (скрытые)
 
 rsync -azvh --delete --exclude '.*' /home/tretyakov/ /tmp/backup/
 
-[задание_1.2](/sflt/rsync/task1_2.png)
+![задание_1.2](/sflt/rsync/task1_2.png)
 
 - Необходимо сделать так, чтобы rsync подсчитывал хэш-суммы для всех файлов, даже если их время модификации и размер идентичны в источнике и приемнике.
 
@@ -36,11 +36,14 @@ rsync -azvhc --delete /home/tretyakov/ /tmp/backup/
 
 - На проверку направить файл crontab и скриншот с результатом работы утилиты.
 
-[задание_2](/sflt/rsync/task2.png)
+на скриншоте срабатывание каждую минуту (для проверки), а в crontab настроено на 18:00 каждого дня
+
+![задание_2](/sflt/rsync/task2.png)
 
 [crontab](/sflt/rsync/crontab)
 
 [script](/sflt/rsync/rsynctest.sh)
+
 ---
 
 ## Задания со звёздочкой*
