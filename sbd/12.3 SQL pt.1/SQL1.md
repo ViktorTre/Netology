@@ -6,7 +6,7 @@
 Получите уникальные названия районов из таблицы с адресами, которые начинаются на “K” и заканчиваются на “a” и не содержат пробелов.
 
 ``` 
-code SELECT DISTINCT DISTRICT FROM address WHERE DISTRICT LIKE 'K%a' and DISTRICT NOT LIKE '% %';
+SELECT DISTINCT DISTRICT FROM address WHERE DISTRICT LIKE 'K%a' and DISTRICT NOT LIKE '% %';
 ``` 
 ---
 # Задание 2
