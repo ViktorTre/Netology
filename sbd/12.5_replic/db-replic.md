@@ -20,9 +20,9 @@
 
 ![docker-compose.yml](/sbd/12.5_replic/db-mysql/docker-compose.yml)
 
-![screen1](/sbd/12.5_replic/db-mysql/task2_1.png)
+![screen1](/sbd/12.5_replic/task2_1.png)
 
-![screen2](/sbd/12.5_replic/db-mysql/task2_2.png)
+![screen2](/sbd/12.5_replic/task2_2.png)
 
 
 ---
