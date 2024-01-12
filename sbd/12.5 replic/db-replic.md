@@ -18,11 +18,11 @@
 
 *Приложите скриншоты конфигурации, выполнения работы: состояния и режимы работы серверов.*
 
-![docker-compose.yml](/db-mysql/docker-compose.yml)
+![docker-compose.yml](/sbd/12.5%replic/db-mysql/docker-compose.yml)
 
-![screen1](/task2_1.png)
+![screen1](/sbd/12.5%replic/db-mysql/task2_1.png)
 
-![screen2](/task2_2.png)
+![screen2](/sbd/12.5%replic/db-mysql/task2_2.png)
 
 
 ---
