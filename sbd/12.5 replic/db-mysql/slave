@@ -1,0 +1,6 @@
+  CHANGE MASTER TO 
+  MASTER_HOST='mysql-master',
+  MASTER_USER='repl',
+  MASTER_PASSWORD='slaverepl',
+  MASTER_LOG_FILE='binlog.000002',
+  MASTER_LOG_POS=157;

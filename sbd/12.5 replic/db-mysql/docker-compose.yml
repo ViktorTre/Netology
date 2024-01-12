@@ -1,0 +1,43 @@
+version: '3'
+services:
+  mysql-master:
+    image: mysql:8.0
+    container_name: mysql-master
+    restart: unless-stopped
+    env_file: .env
+    cap_add:
+      - all
+    volumes: 
+      - ./mysql-master/my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./mysql-master/master.sql:/docker-entrypoint-initdb.d/start.sql
+    environment:
+      - TZ:${TZ}
+      - MYSQL_USER:${MYSQL_USER}
+      - MYSQL_PASSWORD:${MYSQL_PASSWORD}
+      - MYSQL_ROOT_PASSWORD:${MYSQL_PASSWORD}
+    networks:
+      default:
+        aliases:
+          - mysql
+  
+  mysql-slave:
+    image: mysql:8.0
+    container_name: mysql-slave
+    restart: unless-stopped
+    env_file: .env
+    cap_add:
+      - all
+    volumes:
+      - ./mysql-slave/my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./mysql-slave/slave.sql:/docker-entrypoint-initdb.d/start.sql
+    environment:
+      - TZ:${TZ}
+      - MYSQL_USER:${MYSQL_USER}
+      - MYSQL_PASSWORD:${MYSQL_PASSWORD}
+      - MYSQL_ROOT_PASSWORD:${MYSQL_PASSWORD}
+    depends_on:
+      - mysql-master
+    networks:
+      default:
+        aliases:
+          - mysql
