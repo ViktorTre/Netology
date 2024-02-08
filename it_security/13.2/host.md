@@ -6,22 +6,22 @@
 Зашифруйте домашний каталог пользователя с помощью eCryptfs.
 В качестве ответа пришлите снимки экрана домашнего каталога пользователя с исходными и зашифрованными данными.
 
-![1_task](it_security/13.2/1.png)
+![1_task](/it_security/13.2/1.png)
 ---
 
 Задание 2
 Установите поддержку LUKS.
 Создайте небольшой раздел, например, 100 Мб.
 
-![2_task](it_security/13.2/2_1.png)
+![2_task](/it_security/13.2/2_1.png)
 
 Зашифруйте созданный раздел с помощью LUKS.
 
-![2_task](it_security/13.2/2_2.png)
-![2_task](it_security/13.2/2_3.png)
-![2_task](it_security/13.2/2_4.png)
-![2_task](it_security/13.2/2_5.png)
-![2_task](it_security/13.2/2_6.png)
+![2_task](/it_security/13.2/2_2.png)
+![2_task](/it_security/13.2/2_3.png)
+![2_task](/it_security/13.2/2_4.png)
+![2_task](/it_security/13.2/2_5.png)
+![2_task](/it_security/13.2/2_6.png)
 
 
 Дополнительные задания (со звёздочкой*)
