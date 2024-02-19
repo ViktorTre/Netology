@@ -6,7 +6,6 @@ services:
     env_file: .env
     restart: unless-stopped
     volumes: 
-      #- ./my.cnf:/etc/mysql/conf.d/my.cnf
       - ./data:/var/lib/mysql
     environment:
      # - TZ:${TZ}

@@ -3,6 +3,26 @@
 ## Задача 1
 
 Используя Docker, поднимите инстанс MySQL (версию 8). Данные БД сохраните в volume.
+```yaml
+version: '3'
+services:
+  mysql-8:
+    image: mysql:8.0
+    container_name: mysql8
+    env_file: .env
+    restart: unless-stopped
+    volumes: 
+      - ./data:/var/lib/mysql
+    environment:
+     # - TZ:${TZ}
+      - MYSQL_USER:${MYSQL_USER}
+      - MYSQL_PASSWORD:${MYSQL_PASSWORD}
+      - MYSQL_ROOT_PASSWORD:${MYSQL_ROOT_PASSWORD}
+    networks:
+      default:
+        aliases:
+          - mysql
+```
 
 Изучите [бэкап БД](https://github.com/netology-code/virt-homeworks/tree/virt-11/06-db-03-mysql/test_data) и 
 восстановитесь из него.
