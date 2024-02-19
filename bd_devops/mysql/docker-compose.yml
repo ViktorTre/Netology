@@ -1,0 +1,19 @@
+version: '3'
+services:
+  mysql-8:
+    image: mysql:8.0
+    container_name: mysql8
+    env_file: .env
+    restart: unless-stopped
+    volumes: 
+      #- ./my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./data:/var/lib/mysql
+    environment:
+     # - TZ:${TZ}
+      - MYSQL_USER:${MYSQL_USER}
+      - MYSQL_PASSWORD:${MYSQL_PASSWORD}
+      - MYSQL_ROOT_PASSWORD:${MYSQL_ROOT_PASSWORD}
+    networks:
+      default:
+        aliases:
+          - mysql
