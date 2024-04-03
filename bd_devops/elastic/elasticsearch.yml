@@ -1,0 +1,14 @@
+cluster:
+  name: my_cluster
+
+discovery:
+  type: single-node
+
+node:
+  name: netology_test
+
+network:
+  host: 0.0.0.0
+
+path:
+  data: /var/lib/elasticsearch

@@ -59,7 +59,7 @@ CMD ["usr/share/elasticsearch/bin/elasticsearch"]
 
 - ссылку на образ в репозитории dockerhub,
 
-![dockerhub](https://hub.docker.com/repository/docker/vityatre/vityatre-elastic/general)
+[dockerhub](https://hub.docker.com/repository/docker/vityatre/vityatre-elastic/general)
 
 - ответ `Elasticsearch` на запрос пути `/` в json-виде.
 
