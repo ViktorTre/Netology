@@ -28,7 +28,7 @@ Hey, Netology
 - Соберите и отправьте созданный образ в свой dockerhub-репозитории c tag 1.0.0 . 
 - Предоставьте ответ в виде ссылки на https://hub.docker.com/<username_repo>/custom-nginx/general .
 
-![task1](/vritd/compose/1.png)
+![task1](/virtd/compose/1.png)
 
 [dockerhub](https://hub.docker.com/repository/docker/vityatre/custom-nginx/general)
 
@@ -43,9 +43,9 @@ Hey, Netology
 
 В качестве ответа приложите скриншоты консоли, где видно все введенные команды и их вывод.
 
-![task2](/vritd/compose/2.png)
+![task2](/virtd/compose/2.png)
 
-![task2](/vritd/compose/2_1.png)
+![task2](/virtd/compose/2_1.png)
 
 ## Задача 3
 1. Воспользуйтесь docker help или google, чтобы узнать как подключиться к стандартному потоку ввода/вывода/ошибок контейнера "custom-nginx-t2".
@@ -69,9 +69,9 @@ Hey, Netology
 
 В качестве ответа приложите скриншоты консоли, где видно все введенные команды и их вывод.
 
-![task3](/vritd/compose/3.png)
+![task3](/virtd/compose/3.png)
 
-![task3](/vritd/compose/3_1.png)
+![task3](/virtd/compose/3_1.png)
 
 
 ## Задача 4
@@ -86,7 +86,7 @@ Hey, Netology
 
 В качестве ответа приложите скриншоты консоли, где видно все введенные команды и их вывод.
 
-![task4](/vritd/compose/4.png)
+![task4](/virtd/compose/4.png)
 
 видно что каталог синхронизируется на всех 3 "машинах"
 
@@ -120,7 +120,7 @@ services:
 
 запустился compose.yml потому что такое имя ищется компоузом в первую очередь по умолчанию.
 
-![task5](/vritd/compose/5.png)
+![task5](/virtd/compose/5.png)
 
 2. Отредактируйте файл compose.yaml так, чтобы были запущенны оба файла. (подсказка: https://docs.docker.com/compose/compose-file/14-include/)
   
@@ -132,9 +132,9 @@ include:
 
 3. Выполните в консоли вашей хостовой ОС необходимые команды чтобы залить образ custom-nginx как custom-nginx:latest в запущенное вами, локальное registry. Дополнительная документация: https://distribution.github.io/distribution/about/deploying/
 
-![task5](/vritd/compose/5_2.png)
+![task5](/virtd/compose/5_2.png)
 
-![task5](/vritd/compose/5_3.png)
+![task5](/virtd/compose/5_3.png)
 
 4. Откройте страницу "https://127.0.0.1:9000" и произведите начальную настройку portainer.(логин и пароль адмнистратора)
 5. Откройте страницу "http://127.0.0.1:9000/#!/home", выберите ваше local  окружение. Перейдите на вкладку "stacks" и в "web editor" задеплойте следующий компоуз:
@@ -150,13 +150,13 @@ services:
 ```
 6. Перейдите на страницу "http://127.0.0.1:9000/#!/2/docker/containers", выберите контейнер с nginx и нажмите на кнопку "inspect". В представлении <> Tree разверните поле "Config" и сделайте скриншот от поля "AppArmorProfile" до "Driver".
 
-![task5](/vritd/compose/5_4.png)
+![task5](/virtd/compose/5_4.png)
 
 7. Удалите любой из манифестов компоуза(например compose.yaml).  Выполните команду "docker compose up -d". Прочитайте warning, объясните суть предупреждения и выполните предложенное действие. Погасите compose-проект ОДНОЙ(обязательно!!) командой.
 
 В качестве ответа приложите скриншоты консоли, где видно все введенные команды и их вывод, файл compose.yaml , скриншот portainer c задеплоенным компоузом.
 
-![task5](/vritd/compose/5_5.png)
+![task5](/virtd/compose/5_5.png)
 
 ---
 
